@@ -12,20 +12,39 @@
 
 <body>
 
-  <main>
+  <main class="mx-5">
     <section class="container">
+      <div class="columns">
+        <div class="column">
+          <h1 class="has-text-centered is-size-2">Persquisa de usuários</h1>
+        </div>
+      </div>
       <div class="columns">
         <div class="column">
           <div class="field is-grouped">
             <p class="control is-expanded">
-              <input id="search-input" class="input" type="text" placeholder="Find a repository">
+              <input id="search-input" class="input" type="text" placeholder="Pesquisar">
             </p>
             <p class="control">
-              <a class="button is-info">
+              <a id="search-button" class="button is-info" disabled="disabled">
                 Search
               </a>
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="columns">
+        <div class="results column">
+          <h2 class="has-text-centered is-size-3"><span id="found-users-number">0</span>&nbsp;usuário(s) encontrados
+          </h2>
+          <div id="found-users"></div>
+        </div>
+        <div id="found-users-statistics" class="results column">
+          <h2 class="has-text-centered is-size-3">Estatísticas</h2>
+          <div id="statistics-list"></div>
         </div>
       </div>
     </section>
